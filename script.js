@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const downloadButton = document.querySelector(".download-button");
+    const downloadButton = document.getElementById("downloadButton");
   
     downloadButton.addEventListener("click", function(event) {
       event.preventDefault();
   
       const githubActionsEndpoint = "https://api.github.com/repos/ViniKohler/WealthTracker/actions/workflows/build_and_release.yml/dispatches";
   
-      const githubToken = "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";
+      const githubToken = "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";
   
       const requestOptions = {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${githubToken}`,
+          "Authorization": "Bearer " + githubToken,
           "Accept": "application/vnd.github.v3+json",
           "Content-Type": "application/json"
         },
